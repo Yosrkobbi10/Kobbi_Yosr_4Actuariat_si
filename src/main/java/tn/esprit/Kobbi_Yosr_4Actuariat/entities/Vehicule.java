@@ -33,4 +33,7 @@ public class Vehicule {
 
     @ManyToMany
     Set <Equipement> Sequipements;
+
+    @ManyToOne
+    private Agence ags;
 }

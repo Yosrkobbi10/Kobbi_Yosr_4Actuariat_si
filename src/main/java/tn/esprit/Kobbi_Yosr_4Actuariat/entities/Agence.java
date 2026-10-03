@@ -1,10 +1,9 @@
 package tn.esprit.Kobbi_Yosr_4Actuariat.entities;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+
+import java.util.Set;
 
 @Entity
 @Getter
@@ -19,6 +18,14 @@ public class Agence {
     private String addresse;
     private String telephone;
 
+    @ManyToOne
+    private Agence ag;
+
+    @OneToMany (mappedBy = "ags")
+    private Set <Vehicule> v2;
+
+    @OneToMany(mappedBy = "a")
+    private Set<Employe> SEmployes;
 
 
 }
