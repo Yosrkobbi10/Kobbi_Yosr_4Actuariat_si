@@ -1,9 +1,6 @@
 package tn.esprit.Kobbi_Yosr_4Actuariat.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,4 +13,7 @@ public class Maintenance {
     private int idMaintenance;
     private String nom;
     private String prenom;
+
+    @ManyToOne
+    private Vehicule v1 ;
 }

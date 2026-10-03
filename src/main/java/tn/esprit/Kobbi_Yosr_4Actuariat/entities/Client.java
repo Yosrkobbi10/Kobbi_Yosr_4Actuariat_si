@@ -1,15 +1,11 @@
 package tn.esprit.Kobbi_Yosr_4Actuariat.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDate;
+import java.util.Set;
 
 @Getter
 @Entity
@@ -26,4 +22,7 @@ public class Client {
     private String telephone;
     private String numPermis;
     private LocalDate adresse;
+
+    @OneToMany(mappedBy = "c")
+    Set<Reservation> Sresrevations;
 }

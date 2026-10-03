@@ -3,6 +3,7 @@ package tn.esprit.Kobbi_Yosr_4Actuariat.entities;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import java.util.Set;
 
 import java.math.BigDecimal;
 
@@ -26,4 +27,10 @@ public class Vehicule {
 
     @Enumerated(EnumType.STRING)
     private StatutVehicule statut;
+
+    @OneToMany (mappedBy = "v")
+    Set <Reservation>r;
+
+    @ManyToMany
+    Set <Equipement> Sequipements;
 }
