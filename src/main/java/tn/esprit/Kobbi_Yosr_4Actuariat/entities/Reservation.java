@@ -23,11 +23,11 @@ public class Reservation {
 
 
     @OneToOne
-    private Contrat cont ;
+    private Contrat contrat ;
 
     @ManyToOne
-    private Vehicule v ;
+    private Vehicule vehicule ;
 
     @ManyToOne
-    private Client c ;
+    private Client client ;
 }

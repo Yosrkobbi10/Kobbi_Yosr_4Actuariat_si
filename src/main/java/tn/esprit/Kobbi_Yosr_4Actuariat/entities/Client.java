@@ -23,6 +23,6 @@ public class Client {
     private String numPermis;
     private LocalDate adresse;
 
-    @OneToMany(mappedBy = "c")
-    Set<Reservation> Sresrevations;
+    @OneToMany(mappedBy = "client")
+    Set<Reservation> resrevations;
 }

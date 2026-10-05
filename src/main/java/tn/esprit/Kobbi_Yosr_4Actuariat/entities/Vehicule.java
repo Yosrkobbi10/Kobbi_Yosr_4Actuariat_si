@@ -28,12 +28,12 @@ public class Vehicule {
     @Enumerated(EnumType.STRING)
     private StatutVehicule statut;
 
-    @OneToMany (mappedBy = "v")
-    Set <Reservation>r;
+    @OneToMany (mappedBy = "vehicule")
+    Set <Reservation> reservations;
 
     @ManyToMany
-    Set <Equipement> Sequipements;
+    Set <Equipement> equipements;
 
     @ManyToOne
-    private Agence ags;
+    private Agence agence;
 }

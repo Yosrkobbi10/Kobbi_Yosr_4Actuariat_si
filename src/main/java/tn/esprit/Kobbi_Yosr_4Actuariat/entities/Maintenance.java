@@ -15,5 +15,5 @@ public class Maintenance {
     private String prenom;
 
     @ManyToOne
-    private Vehicule v1;
+    private Vehicule vehicule;
 }

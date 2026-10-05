@@ -18,14 +18,15 @@ public class Agence {
     private String addresse;
     private String telephone;
 
-    @ManyToOne
-    private Agence ag;
 
-    @OneToMany (mappedBy = "ags")
-    private Set <Vehicule> v2;
 
-    @OneToMany(mappedBy = "a")
-    private Set<Employe> SEmployes;
+    @OneToMany (mappedBy = "agence")
+    private Set <Vehicule> vehicules;
+
+
+    //agence--employee
+    @OneToMany(mappedBy = "agence")
+    private Set<Employe> employes;
 
 
 }

@@ -16,6 +16,7 @@ public class Employe {
     @Enumerated(EnumType.STRING)
     private RoleEmploye role;
 
+    //agence--employee
     @ManyToOne
-    private Agence a ;
+    private Agence agence ;
 }

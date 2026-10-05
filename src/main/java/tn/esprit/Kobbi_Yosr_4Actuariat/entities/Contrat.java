@@ -1,6 +1,7 @@
 package tn.esprit.Kobbi_Yosr_4Actuariat.entities;
 
 import java.time.LocalDate;
+import java.util.Set;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -21,4 +22,7 @@ public class Contrat {
 
     @OneToOne(mappedBy="contrat")
     private Reservation reservation;
+
+    @OneToMany(mappedBy = "contrat", cascade = CascadeType.PERSIST, orphanRemoval = true, fetch =  FetchType.EAGER)
+    private Set<Paiement> Paiments;
 }

@@ -18,8 +18,8 @@ public class Equipement {
     private long idEquipement;
     private String libele;
 
-    @ManyToMany(mappedBy= "e")
-    Set<Vehicule> Svehicules;
+    @ManyToMany(mappedBy= "equipements")
+    Set<Vehicule> vehicules;
 
 
 
