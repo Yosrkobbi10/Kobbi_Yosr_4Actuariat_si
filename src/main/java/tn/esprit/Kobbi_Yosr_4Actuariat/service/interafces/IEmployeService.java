@@ -15,6 +15,10 @@ public interface IEmployeService {
     public void removeEmploye(Long employeId);
 
     public Employe modifyEmploye(Employe employe);
+
+    public Employe desaffecterEmploye(Long idEmploye);
+
+    public Employe affecterEmploye(Long idEmploye, Long idAgence);
 }
 
 
